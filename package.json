@@ -1,0 +1,24 @@
+{
+  "name": "rbb-airtable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brentmclark/RBB-airtable.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brentmclark/RBB-airtable/issues"
+  },
+  "homepage": "https://github.com/brentmclark/RBB-airtable#readme",
+  "dependencies": {
+    "airtable": "^0.8.1",
+    "dotenv": "^8.2.0"
+  }
+}
