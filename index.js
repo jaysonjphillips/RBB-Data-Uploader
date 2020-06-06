@@ -1,5 +1,6 @@
+require('dotenv').config()
 var Airtable = require('airtable');
-var base = new Airtable({apiKey: 'keyHNkMrp11T6Jx6y'}).base('appFoFzjMcciPUgoK');
+var base = new Airtable({apiKey: process.env.MY_AIRTABLE_API_KEY}).base('appFoFzjMcciPUgoK');
 
 base('Businesses').select({
     // Selecting the first 3 records in Grid view:
