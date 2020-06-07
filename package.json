@@ -22,7 +22,10 @@
   "homepage": "https://github.com/brentmclark/RBB-airtable#readme",
   "dependencies": {
     "airtable": "^0.8.1",
+    "boxen": "^4.2.0",
     "csv-parser": "^2.3.3",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "get-stream": "^5.1.0",
+    "yargs": "^15.3.1"
   }
 }

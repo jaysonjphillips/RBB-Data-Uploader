@@ -11,11 +11,10 @@ const schema = Object.freeze({
     'CreatedAt': '',
 });
 
-const normalizeRecord = (data, recordConverter, normalizedArr) => {
-    let newRecord = {
-        fields: recordConverter(data) 
+const normalizeRecord = (data, converter) => {
+    return {
+        fields: converter(data)
     }
-    normalizedArr.push(newRecord);
 }
 
 module.exports = {
