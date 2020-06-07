@@ -1,7 +1,7 @@
-const AirtableBase = require('./airtable');
-const GoFundMe = require('./gofundme');
+const airtable = require('./airtable');
+const gofundme = require('./gofundme');
 
 module.exports = {
-    AirtableBase,
-    GoFundMe
+    airtable,
+    gofundme
 }
