@@ -3,13 +3,13 @@ const base =  require('./airtable-provider')
 const fancyLog = require('../utils').fancyLog
 const listRecords = require('./list')
 const _ = require('lodash')
+
 const parseData = require('../csv') 
 
 
 async function create(tablename, csvFile, csvSource) {
   // TODO: (bmc) Need to get this list from a CSV file referenced as an arg to the command
   const listToUpload = await parseData(csvFile, csvSource)
-  console.log(listToUpload)
   listRecords(tablename, function createRecords(tableData) {
     const dedupedUploadList = []
     listToUpload.forEach(function(row) {
