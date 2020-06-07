@@ -1,4 +1,4 @@
-const AirtableFormats = require('./airtable');
+const {schema} = require('../lib/airtable');
 
 const AirtableMapping = {
     includeOnWebsite: 'Approved',
@@ -8,8 +8,8 @@ const AirtableMapping = {
     progress:   'In Need'
 }
 
-const convertRecordToAirtable = (record) => {
-    const result = Object.assign({}, AirtableFormats.schema);
+const convertToAirtable = (record) => {
+    const result = Object.assign({}, schema);
 
     for(field in record) {
         if(AirtableMapping[field]) {
@@ -22,13 +22,6 @@ const convertRecordToAirtable = (record) => {
     return result;
 }
 
-const normalizeRecord = (data, normalizedArr) => {
-    let newRecord = {
-        fields: convertRecordToAirtable(data) 
-    }
-    normalizedArr.push(newRecord);
-}
-
 module.exports = {
-    normalizeRecord
+    convertToAirtable
 }
